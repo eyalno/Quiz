@@ -60,4 +60,13 @@ public class Question
     public void setAnswer(String answer) {
         this.answer = answer;
     }
+
+    @Override
+    public String toString() {
+        return "Question " + id + ": " + question + "\n" +
+               "A. " + opt1 + "\n" +
+               "B. " + opt2 + "\n" +
+               "C. " + opt3 + "\n" +
+               "D. " + opt4 + "\n";
+    }
 }

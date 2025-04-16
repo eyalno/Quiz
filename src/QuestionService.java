@@ -1,6 +1,9 @@
+import java.util.Scanner;
+
 public class QuestionService {
 
     Question[] questions = new Question[5];
+    String selection[] = new String[5];
 
     {
         questions[0] = new Question(1, "What is the size of an int in Java?", "2", "6", "8", "32", "32");
@@ -10,8 +13,16 @@ public class QuestionService {
         questions[4] = new Question(5, "Which of these is not a Java primitive type?", "int", "float", "String", "char", "String");
     }
 
-    public void displayQuestions()
-    {
+    public void displayQuestions() {
+        
+        
+        for (int i = 0; i < questions.length ; i++) {
+            System.out.println(questions[i].toString());
+            Scanner sc = new Scanner(System.in);
+            selection[i] = sc.nextLine();
+        }
+        
+    
     }
 
 }
