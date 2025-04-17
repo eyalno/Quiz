@@ -22,8 +22,6 @@ public class QuestionService
             Scanner sc = new Scanner(System.in);
             selection[i] = sc.nextLine();
         }
-        
-    
     }
 
     public void printScore() 
