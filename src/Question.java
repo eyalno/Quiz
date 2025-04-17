@@ -1,72 +1,86 @@
-public class Question
-{
+public class Question {
     private int id;
-    private String question; 
-    private String opt1;
-    private String opt2;
-    private String opt3;
-    private String opt4;
-    private String answer;
-    
-    public Question(int id, String question, String opt1, String opt2, String opt3, String opt4, String answer) {
+    private String questionText;
+    private String option1;
+    private String option2;
+    private String option3;
+    private String option4;
+    private String correctAnswer;
+
+    // Constructor
+    public Question(int id, String questionText, String option1, String option2, String option3, String option4, String correctAnswer) {
         this.id = id;
-        this.question = question;
-        this.opt1 = opt1;
-        this.opt2 = opt2;
-        this.opt3 = opt3;
-        this.opt4 = opt4;
-        this.answer = answer;
+        this.questionText = questionText;
+        this.option1 = option1;
+        this.option2 = option2;
+        this.option3 = option3;
+        this.option4 = option4;
+        this.correctAnswer = correctAnswer;
     }
 
     public int getId() {
         return id;
     }
+
     public void setId(int id) {
         this.id = id;
     }
-    public String getQuestion() {
-        return question;
-    }
-    public void setQuestion(String question) {
-        this.question = question;
-    }
-    public String getOpt1() {
-        return opt1;
-    }
-    public void setOpt1(String opt1) {
-        this.opt1 = opt1;
-    }
-    public String getOpt2() {
-        return opt2;
-    }
-    public void setOpt2(String opt2) {
-        this.opt2 = opt2;
-    }
-    public String getOpt3() {
-        return opt3;
-    }
-    public void setOpt3(String opt3) {
-        this.opt3 = opt3;
-    }
-    public String getOpt4() {
-        return opt4;
-    }
-    public void setOpt4(String opt4) {
-        this.opt4 = opt4;
-    }
-    public String getAnswer() {
-        return answer;
-    }
-    public void setAnswer(String answer) {
-        this.answer = answer;
+
+    public String getQuestionText() {
+        return questionText;
     }
 
+    public void setQuestionText(String questionText) {
+        this.questionText = questionText;
+    }
+
+    public String getOption1() {
+        return option1;
+    }
+
+    public void setOption1(String option1) {
+        this.option1 = option1;
+    }
+
+    public String getOption2() {
+        return option2;
+    }
+
+    public void setOption2(String option2) {
+        this.option2 = option2;
+    }
+
+    public String getOption3() {
+        return option3;
+    }
+
+    public void setOption3(String option3) {
+        this.option3 = option3;
+    }
+
+    public String getOption4() {
+        return option4;
+    }
+
+    public void setOption4(String option4) {
+        this.option4 = option4;
+    }
+
+    public String getCorrectAnswer() {
+        return correctAnswer;
+    }
+
+    public void setCorrectAnswer(String correctAnswer) {
+        this.correctAnswer = correctAnswer;
+    }
+
+    // Optionally, override toString for better question display
     @Override
     public String toString() {
-        return "Question " + id + ": " + question + "\n" +
-               "A. " + opt1 + "\n" +
-               "B. " + opt2 + "\n" +
-               "C. " + opt3 + "\n" +
-               "D. " + opt4 + "\n";
+        return id + ". " + questionText + "\n" +
+               "a) " + option1 + "\n" +
+               "b) " + option2 + "\n" +
+               "c) " + option3 + "\n" +
+               "d) " + option4;
     }
 }

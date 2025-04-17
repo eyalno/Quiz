@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
-public class QuestionService {
+public class QuestionService
+{
 
     Question[] questions = new Question[5];
     String selection[] = new String[5];
@@ -13,8 +14,8 @@ public class QuestionService {
         questions[4] = new Question(5, "Which of these is not a Java primitive type?", "int", "float", "String", "char", "String");
     }
 
-    public void displayQuestions() {
-        
+    public void displayQuestions() 
+    {
         
         for (int i = 0; i < questions.length ; i++) {
             System.out.println(questions[i].toString());
@@ -23,6 +24,19 @@ public class QuestionService {
         }
         
     
+    }
+
+    public void printScore() 
+    {
+        int score = 0;
+
+        for (int i = 0; i < questions.length; i++) {
+            if (selection[i] != null && selection[i].equalsIgnoreCase(questions[i].getCorrectAnswer())) {
+                score++;
+            }
+        }
+
+        System.out.println("Your score is: " + score + "/" + questions.length);
     }
 
 }
